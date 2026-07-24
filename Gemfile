@@ -22,6 +22,9 @@ gem "bootsnap", require: false
 gem "thruster", require: false
 
 group :development, :test do
+  # Loads config vars from .env locally. On Build, config vars come from environment variables instead.
+  gem "dotenv-rails"
+
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
