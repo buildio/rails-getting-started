@@ -1,0 +1,28 @@
+<svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Button background with rounded corners -->
+  <rect x="2" y="2" width="196" height="46" rx="4" ry="4" fill="#0995c5" stroke="#000000" stroke-width="1"/>
+  
+  <!-- Inner highlight -->
+  <rect x="3" y="3" width="194" height="44" rx="3" ry="3" fill="#0ab7ef"/>
+  
+  <!-- Isometric cube icon -->
+  <g transform="translate(15, 10)">
+    <!-- Top face (yellow) -->
+    <path d="M 10 5 L 20 10 L 10 15 L 0 10 Z" fill="#ffd93d"/>
+    
+    <!-- Left face (red/orange) -->
+    <path d="M 0 10 L 10 15 L 10 25 L 0 20 Z" fill="#ff6b6b"/>
+    
+    <!-- Right face (cyan) -->
+    <path d="M 10 15 L 20 10 L 20 20 L 10 25 Z" fill="#4ecdc4"/>
+    
+    <!-- Edges for definition -->
+    <path d="M 10 5 L 20 10 L 10 15 L 0 10 Z M 0 10 L 10 15 L 10 25 L 0 20 Z M 10 15 L 20 10 L 20 20 L 10 25 Z" 
+          fill="none" stroke="#333" stroke-width="0.5" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Button text -->
+  <text x="110" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="white" text-anchor="middle">
+    Deploy to Build
+  </text>
+</svg>
