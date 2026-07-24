@@ -1,0 +1,51 @@
+<% content_for :title, "Getting Started with Rails on Build" %>
+
+<main class="container">
+  <header>
+    <div class="badge">⬢ Running on Build</div>
+    <h1><%= @greeting %></h1>
+    <p class="subtitle">
+      This is a sample Ruby on Rails app deployed on
+      <strong>Build</strong>. Clone it, change it, and redeploy —
+      it's your playground.
+    </p>
+  </header>
+
+  <section class="card">
+    <h2>Runtime info</h2>
+    <table>
+      <tr><th>Ruby version</th><td><%= @env[:ruby_version] %></td></tr>
+      <tr><th>Rails version</th><td><%= @env[:rails_version] %></td></tr>
+      <tr><th>Listening on port</th><td><%= @env[:port] %></td></tr>
+      <tr><th>Deployed at</th><td><%= @env[:deployed_at] %></td></tr>
+      <tr><th>Uptime</th><td><%= @env[:uptime] %>s</td></tr>
+    </table>
+    <p class="hint">
+      The port comes from the <code>PORT</code> environment variable that
+      Build injects at runtime.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Live config vars</h2>
+    <p>
+      The greeting above is read from the <code>GREETING</code> config var.
+      Change it without redeploying:
+    </p>
+    <pre><code>bld config:set GREETING="こんにちは, Build!" -a &lt;your-app&gt;</code></pre>
+    <p>Then refresh this page.</p>
+  </section>
+
+  <section class="card">
+    <h2>Make it yours</h2>
+    <ol>
+      <li>Add a new route in <code>config/routes.rb</code> and a matching controller action.</li>
+      <li>Or edit this page's content in <code>app/views/pages/index.html.erb</code>.</li>
+      <li>Commit, push to GitHub, and watch Build redeploy automatically.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <a href="https://build.io">build.io</a>
+  </footer>
+</main>
