@@ -1,0 +1,37 @@
+{
+  "name": "rails-getting-started",
+  "description": "A barebones Ruby on Rails app ready to deploy to Build (build.io).",
+  "keywords": ["ruby", "rails", "getting-started"],
+  "repository": "https://github.com/buildio/rails-getting-started",
+  "success_url": "/",
+  "buildpacks": [
+    { "url": "heroku/ruby" }
+  ],
+  "env": {
+    "GREETING": {
+      "description": "Greeting shown on the landing page and returned by /api/greeting.",
+      "value": "Hello from Build!",
+      "required": false
+    },
+    "SECRET_KEY_BASE": {
+      "description": "Secret used by Rails to sign and encrypt cookies and sessions.",
+      "generator": "secret"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "standard-1x"
+    }
+  },
+  "environments": {
+    "review": {},
+    "test": {
+      "env": {
+        "GREETING": {
+          "value": "Hello from test!"
+        }
+      }
+    }
+  }
+}
