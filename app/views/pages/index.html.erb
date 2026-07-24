@@ -33,7 +33,9 @@
       Change it without redeploying:
     </p>
     <pre><code>bld config:set GREETING="こんにちは, Build!" -a &lt;your-app&gt;</code></pre>
-    <p>Then refresh this page.</p>
+    <p>Then refresh this page, or hit the API:</p>
+    <pre><code>curl https://&lt;your-app&gt;.build.io/api/greeting</code></pre>
+    <p class="hint" id="api-result">Fetching <code>/api/status</code>…</p>
   </section>
 
   <section class="card">
@@ -46,6 +48,21 @@
   </section>
 
   <footer>
-    <a href="https://build.io">build.io</a>
+    <a href="https://build.io">build.io</a> ·
+    <a href="/api/status">/api/status</a> ·
+    <a href="/api/greeting">/api/greeting</a>
   </footer>
 </main>
+
+<script>
+  fetch('/api/status')
+    .then(r => r.json())
+    .then(d => {
+      document.getElementById('api-result').textContent =
+        `Live from /api/status — status: ${d.status}, uptime: ${d.uptimeSeconds}s, ruby: ${d.ruby}`;
+    })
+    .catch(() => {
+      document.getElementById('api-result').textContent =
+        'Could not reach /api/status';
+    });
+</script>

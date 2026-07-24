@@ -11,4 +11,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "pages#index"
+
+  # JSON API to demo with curl or fetch()
+  get "api/status", to: "api#status"
+  get "api/greeting", to: "api#greeting"
 end
