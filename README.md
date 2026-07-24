@@ -4,6 +4,10 @@ A barebones [Ruby on Rails](https://rubyonrails.org/) app, ready to deploy to [B
 
 Use it as a starting point for your own app, or as a sandbox to learn the Build deployment workflow: buildpacks, Procfiles, config vars, and automatic deploys.
 
+<a href="https://app.build.io/deploy?template=buildio/rails-getting-started">
+  <img src="https://app.build.io/deploy-to-build-button.svg" alt="Deploy" width="150px">
+</a>
+
 ## What's inside
 
 ```
