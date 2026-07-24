@@ -95,3 +95,12 @@ Prefer Docker? A `Dockerfile` is included. In **Settings → Stack**, select `do
 - Uncomment the sample route in `config/routes.rb` and the matching action in `app/controllers/pages_controller.rb`, then redeploy.
 - Add a `worker:` process to the Procfile for background jobs.
 - Attach a database from the dashboard and re-enable Active Record — see [Databases & Add-ons](https://build.io/docs/guides/databases-and-addons).
+
+
+## Deploy to Build
+
+Deploy this application to Build with one click:
+
+<a href="https://app.build.io/deploy?template=buildio/rails-getting-started">
+  <img src="https://app.build.io/deploy-to-build-button.svg" alt="Deploy" width="150px">
+</a>
